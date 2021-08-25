@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- <link href="css/mui.css" rel="stylesheet" /> -->
+		
+		<link href="css/hover.css" rel="stylesheet" media="all">
+		<!-- <link rel="stylesheet" href="css/index.css" /> -->
+		<!-- <link href="./files/front.home.min.css" rel="stylesheet" type="text/css"> -->
+		<link rel="stylesheet" href="css/searchbar.css" />
+		<link rel="stylesheet" href="css/linkBtns.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<!-- 我的阿里图标库 -->
+		<script src="http://at.alicdn.com/t/font_2761549_0xrmc2d1j7c.js"></script>
+		
+		<script src = "http://code.jquery.com/jquery-1.11.0.min.js" > </script>
+
+	</head>
+	
+	
+
+	<body OnLoad="typetext()&onresizedfun()" onclick="playColor(event)&playFuQiang(event)" ontouch="toucuPlayColor(event)&touchPlayFuQiang(event)">
+		<!-- <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script> -->
+		<script src="./js/click-colorful.js"></script>
+		
+		<!-- 一句真言加打字输出 -->
+		<script language="JavaScript">
+		
+			var text = "获取中....";
+			var pos = 0;
+			reqHitokoto();
+		
+			function reqHitokoto(){
+				fetch('https://v1.hitokoto.cn')
+					.then(response => response.json())
+					.then(data => {
+						text = data.hitokoto
+						const hitokoto = document.getElementById('hitokoto_text')
+					  //hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+					  //hitokoto.innerText = data.hitokoto
+					})
+					.catch(console.error)
+			}
+			
+
+			function typetext() {
+				var len = text.length;
+				hitokoto.innerText = text.substring(0, pos) + " |";
+				if (pos++ == len) {
+					hitokoto.innerText = text;
+					pos = 0;
+				} else {
+					setTimeout("typetext()", 120);
+				}
+			}
+			
+			function reqAndType() {
+				if(pos == 0){
+					// localStorage.removeItem("animatedIndex");
+					reqHitokoto();
+					pos = 0;
+					typetext();
+				}
+			}
+			
+		</script>
+		
+		
+		<!-- <header style="background-color: rgba(255, 255, 255, 0.5);"> -->
+		<header style="text-align: right;">
+			<div style="width: 100%; ">
+							
+				<svg class="header-img-huanyihuan" aria-hidden="true" onclick="reqAndType()">
+					<use xlink:href="#icon-huanyihuan"></use>
+				</svg>
+				
+				<svg class="header-img-pic" aria-hidden="true" onclick="turnStaticBg_s()">
+					<use xlink:href="#icon-picture"></use>
+				</svg>
+				<svg class="header-img-fengche" aria-hidden="true" onclick="turnBg()">
+					<use xlink:href="#icon-fengche"></use>
+				</svg>
+				
+			</div>
+		</header>
+		
+		<div id="content">
+			
+			<!--内容-->
+			<div class="main">
+				<div  style="text-align: center; min-height: 115px; width: 100%; max-width: 900px; position: relative; margin: auto;padding-top: 60px;">
+					<a id="hitokoto" class="hvr-bubble-float-bottom" style="font-size: xx-large; border-radius: 40px; background-color: rgba(70, 70, 70, 0.8); padding: 12px; font-weight: bold; color: #F4F4F4;"></a>
+				</div>
+
+				
+				<div class="container content-box">
+					
+					<!--搜索栏-->
+					<section class="sousuo">
+						<div class="search">
+							<div class="search-box">
+								<span class="search-btn-span">
+									<svg class="search-engine-img" aria-hidden="true">
+									  <use xlink:href="#icon-baidu" id="search-engine-img-use"></use>
+									</svg>
+								</span>
+								<input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索" />
+								
+								<span class="search-btn-span" id="search-btn">
+									<svg class="search-btn-img" aria-hidden="true">
+										<use xlink:href="#icon-sousuo"></use>
+									</svg>
+								</span>
+							</div>
+							
+							<!-- 搜索引擎 -->
+							<div class="search-engine">
+								<div class="search-engine-head">
+									<strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+								</div>
+								<ul class="search-engine-list">
+								</ul>
+							</div>
+						</div>
+					</section>
+					
+					<section class="linkBtns">
+						<div class="linkBtnsBox">
+							<ul class="linkBtns-list">
+							</ul>
+						</div>
+					</section>
+					
+				</div>
+				<!--内容区域-->
+			</div>
+		</div>
+		
+		
+		<iframe id="bg-iframe" name="ibg_iframe" scrolling="no"  onresize="onresizedfun()" ></iframe>
+		<!-- <iframe id="left-iframe" scrolling="yes"  onresize="onresizedfun()" src="https://hao.5iux.cn/" ></iframe> -->
+		
+		<script src="js/searchbar.js"></script>
+		<script src="js/linkBtns.js"></script>
+		
+		<!-- header图标动画 -->
+		<script language="javascript">
+			$('.header-img-huanyihuan').click(function() {
+				$('.header-img-huanyihuan').css('animation', 'btnRotate 0.5s 0s ease-in-out forwards');
+				setTimeout(function(){
+					iconAnimateReset('header-img-huanyihuan');
+				},599);
+				// $('.header-img').css('animation', 'btnRotate 0.1s 0.6s ease-in-out reverse')
+			});
+			$('.header-img-pic').click(function() {
+				iconShakeOnce('header-img-pic');
+				// $('.header-img-pic').css('animation', 'btnShake 0.5s 0s ease-in-out forwards');
+				// setTimeout(function(){
+				// 	$('.header-img-pic').css('animation', 'Paused');
+				// },599);
+				
+				// $('.header-img').css('animation', 'btnRotate 0.1s 0.6s ease-in-out reverse')
+			});
+			$('.header-img-fengche').click(function() {
+				$('.header-img-fengche').css('animation', 'btnRotate 0.5s 0s ease-in-out reverse');
+				setTimeout(function(){
+					iconAnimateReset('header-img-fengche');
+				},599);
+				// $('.header-img').css('animation', 'btnRotate 0.1s 0.6s ease-in-out reverse')
+			});
+			
+			function iconShakeOnce(_iconName){
+				$('.'+_iconName).css('animation', 'btnShake 0.5s 0s ease-in-out forwards');
+				setTimeout(function(){iconAnimateReset(_iconName)},599);
+			}
+			function iconAnimateReset(_iconName) {
+				$('.'+_iconName).css('animation', 'None');
+			}
+		</script>
+		
+		<!-- 更换动态壁纸 -->
+		<script language="javascript">
+			//标志初始化
+			var requestingBgFlag = 0;
+			
+			//初始化壁纸
+			var staticOrAnimate = localStorage.getItem("staticOrAnimate");
+			if(staticOrAnimate == null){
+				staticOrAnimate = 1;  //默认动态
+			}
+			//动态变量初始化
+			var Arraycolor=new Array("blackBubbles.htm","blackLines.html","blueWines.htm","butterflies.htm","coldRainyCity.htm","colorChanging.htm","colorfulLinesMouse.htm","colorfulNumRain.html","colorWines.html","expanding.html","fog.html","fireworks.htm","greenBubbles.htm","GreenGrassRainy.html","litleFireworks.htm","numRain.html","petals.htm","pinkBubble.htm","pinkBubbles.htm","pinkColor.htm","redOil.html","shinyBubbles.htm","sidai.htm","snowNight.htm","snowNightChrismasTree.htm","snowWhiteHouse.htm","starryNight.html","triangs.htm","wave.htm","wines.htm","yellowBubbles.htm");
+			var n=localStorage.getItem("animatedIndex");//根据name取值 
+			if (n == null){
+				n =20;
+			}
+			//静态变量初始化
+			var staticBgUrl = localStorage.getItem("staticBgUrl");
+			if((staticBgUrl == null)&&(staticOrAnimate == 0)){
+				reqStaticBgUrl_s();   //包含了onresizedfun()
+			}else{
+				onresizedfun();
+			}
+			
+			
+			function onresizedfun(){
+				if(staticOrAnimate == 1){
+					//动态处理
+					document.getElementById("bg-iframe").src =  "./files/"+Arraycolor[n];
+				}else{
+					//静态处理
+					document.getElementById("bg-iframe").src =  staticBgUrl;
+				}
+				document.getElementById("bg-iframe").style.display = "Block";
+			}
+			
+			//更换动态壁纸 
+			function turnBg(){
+				if(staticOrAnimate == 1){
+					n++;
+					if (n==(Arraycolor.length)) n=0;
+					localStorage.setItem("animatedIndex",n);  //存值  键name  值 value
+				}
+				staticOrAnimate = 1;
+				localStorage.setItem("staticOrAnimate",staticOrAnimate);
+				onresizedfun();
+			}
+			
+			
+			
+			//更换静态壁纸
+			function reqStaticBgUrl_s(){
+				requestingBgFlag = 1;
+				fetch('https://source.unsplash.com/random/1920x1080')
+					.then((res)=>{
+						localStorage.setItem("staticBgUrl",res.url);
+						staticBgUrl = res.url;
+						turnStaticBg();
+						requestingBgFlag = 0;
+					})
+					.catch(console.error)
+			}
+			function turnStaticBg(){
+				staticOrAnimate = 0;
+				localStorage.setItem("staticOrAnimate",staticOrAnimate);
+				onresizedfun();
+			}
+			
+			function turnStaticBg_s() {
+				if(staticOrAnimate == 0){
+					reqStaticBgUrl_s();
+				}else{
+					staticOrAnimate = 0;
+					localStorage.setItem("staticOrAnimate",staticOrAnimate);
+					onresizedfun();
+				}
+				
+			}
+		</script>
+		
+		<!-- infinity静态壁纸 未完成  -->
+		<script language="javascript">
+			
+			
+			function turnStaticBg2(){
+				const timestamp = (new Date()).valueOf();
+				console.log('https://infinity-api.infinitynewtab.com/random-wallpaper?_='+timestamp);
+				fetch('https://infinity-api.infinitynewtab.com/random-wallpaper?_='+timestamp)
+					.then(response => response.json())
+					.then(data => {
+						var url = data.data[0].src.bigSrc;
+						
+						var xhr = new XMLHttpRequest(); 
+						
+						xhr.open('GET', url); 
+						// xhr.onreadystatechange = handler; 
+						// xhr.responseType = 'blob'; 
+						// xhr.setRequestHeader('Authorization', 'Bearer ' + token); 
+						// xhr.setRequestHeader('Authorization', 'Bearer ');
+						xhr.send(); 
+						
+						function handler() { 
+						    if (this.readyState === this.DONE) { 
+						    if (this.status === 200) { 
+						     // this.response is a Blob, because we set responseType above 
+						     var data_url = URL.createObjectURL(this.response); 
+						     document.getElementById("bg-iframe").src =  data_url;
+						     document.getElementById("bg-iframe").style.display = "Block";
+						    } else { 
+						     console.error('no pdf :('); 
+						    } 
+						    } 
+						}
+					})
+					.catch(console.error)
+					
+				
+			}
+		</script>
+		
+	</body>
+
+</html>

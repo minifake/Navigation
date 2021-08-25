@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<style>
+			html {
+				line-height: 1.15;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%
+			}
+
+			body {
+				margin: 0
+			}
+
+			article,
+			aside,
+			footer,
+			header,
+			nav,
+			section {
+				display: block
+			}
+
+			h1 {
+				font-size: 2em;
+				margin: .67em 0
+			}
+
+			figcaption,
+			figure,
+			main {
+				display: block
+			}
+
+			figure {
+				margin: 1em 40px
+			}
+
+			hr {
+				box-sizing: content-box;
+				height: 0;
+				overflow: visible
+			}
+
+			pre {
+				font-family: monospace, monospace;
+				font-size: 1em
+			}
+
+			a {
+				background-color: transparent;
+				-webkit-text-decoration-skip: objects
+			}
+
+			abbr[title] {
+				border-bottom: none;
+				text-decoration: underline;
+				text-decoration: underline dotted
+			}
+
+			b,
+			strong {
+				font-weight: inherit
+			}
+
+			b,
+			strong {
+				font-weight: bolder
+			}
+
+			code,
+			kbd,
+			samp {
+				font-family: monospace, monospace;
+				font-size: 1em
+			}
+
+			dfn {
+				font-style: italic
+			}
+
+			mark {
+				background-color: #ff0;
+				color: #000
+			}
+
+			small {
+				font-size: 80%
+			}
+
+			sub,
+			sup {
+				font-size: 75%;
+				line-height: 0;
+				position: relative;
+				vertical-align: baseline
+			}
+
+			sub {
+				bottom: -.25em
+			}
+
+			sup {
+				top: -.5em
+			}
+
+			audio,
+			video {
+				display: inline-block
+			}
+
+			audio:not([controls]) {
+				display: none;
+				height: 0
+			}
+
+			img {
+				border-style: none
+			}
+
+			svg:not(:root) {
+				overflow: hidden
+			}
+
+			button,
+			input,
+			optgroup,
+			select,
+			textarea {
+				font-family: sans-serif;
+				font-size: 100%;
+				line-height: 1.15;
+				margin: 0
+			}
+
+			button,
+			input {
+				overflow: visible
+			}
+
+			button,
+			select {
+				text-transform: none
+			}
+
+			[type=reset],
+			[type=submit],
+			button,
+			html [type=button] {
+				-webkit-appearance: button
+			}
+
+			[type=button]::-moz-focus-inner,
+			[type=reset]::-moz-focus-inner,
+			[type=submit]::-moz-focus-inner,
+			button::-moz-focus-inner {
+				border-style: none;
+				padding: 0
+			}
+
+			[type=button]:-moz-focusring,
+			[type=reset]:-moz-focusring,
+			[type=submit]:-moz-focusring,
+			button:-moz-focusring {
+				outline: 1px dotted ButtonText
+			}
+
+			fieldset {
+				padding: .35em .75em .625em
+			}
+
+			legend {
+				box-sizing: border-box;
+				color: inherit;
+				display: table;
+				max-width: 100%;
+				padding: 0;
+				white-space: normal
+			}
+
+			progress {
+				display: inline-block;
+				vertical-align: baseline
+			}
+
+			textarea {
+				overflow: auto
+			}
+
+			[type=checkbox],
+			[type=radio] {
+				box-sizing: border-box;
+				padding: 0
+			}
+
+			[type=number]::-webkit-inner-spin-button,
+			[type=number]::-webkit-outer-spin-button {
+				height: auto
+			}
+
+			[type=search] {
+				-webkit-appearance: textfield;
+				outline-offset: -2px
+			}
+
+			[type=search]::-webkit-search-cancel-button,
+			[type=search]::-webkit-search-decoration {
+				-webkit-appearance: none
+			}
+
+			::-webkit-file-upload-button {
+				-webkit-appearance: button;
+				font: inherit
+			}
+
+			details,
+			menu {
+				display: block
+			}
+
+			summary {
+				display: list-item
+			}
+
+			canvas {
+				display: inline-block
+			}
+
+			template {
+				display: none
+			}
+
+			[hidden] {
+				display: none
+			}
+		</style>
+		<style>
+			body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				background: linear-gradient(to top, #FEDB75, #E3F68D);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<canvas id="bubbles" width="1680" height="825">
+
+			<script>
+				var c = document.getElementById('bubbles'),
+					ctx = c.getContext('2d'),
+					width = window.innerWidth,
+					height = window.innerHeight,
+					particles = 60,
+					minRadius = 5,
+					maxRadius = 20,
+					speed = 0.00001,
+					x = width / particles;
+
+				var Bubbles = [];
+
+				function start() {
+					for (var i = 0; i < particles; i++) {
+						Bubbles.push({
+							x: i * x,
+							y: height * Math.random(),
+							r: minRadius + Math.random() * (maxRadius - minRadius),
+							speed: 10 * Math.random()
+						});
+					}
+				}
+
+				function bubble() {
+
+					c.width = width;
+					c.height = height;
+					for (i = 0; i < Bubbles.length; i++) {
+						var b = Bubbles[i];
+						console.log(i, b);
+						ctx.beginPath();
+						ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
+
+						b.alpha = .5 * (b.y / height);
+						b.speed += speed;
+
+						ctx.strokeStyle = "rgba(255, 255, 255, .5)";
+						ctx.stroke();
+						ctx.fillStyle = "hsla(255, 75%, 69%," + b.alpha + ")";
+						ctx.fill();
+						b.y -= b.speed;
+						if (b.y < 0) {
+							b.y = height;
+							b.speed = Math.random() * 5;
+						}
+					}
+				}
+
+				function draw() {
+					bubble();
+					window.requestAnimationFrame(draw);
+				}
+
+				function resizeCanvas() {
+					width = window.innerWidth,
+						height = window.innerHeight;
+					c.width = width;
+					c.height = height;
+					draw();
+				}
+
+				start();
+				resizeCanvas();
+
+				window.onresize = function() {
+					resizeCanvas();
+
+					Bubbles = [];
+					start();
+				};
+			</script>
+
+
+		</canvas>
+	</body>
+</html>

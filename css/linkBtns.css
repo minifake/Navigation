@@ -1,0 +1,55 @@
+.linkBtns {
+	padding: 60px 0;
+}
+
+.linkBtnsBox {
+	position: relative;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	border-radius: 50px;
+	background-color: rgba(0, 0, 0, 0.2);
+	
+}
+
+.linkBtns-list {
+	display: flex;
+	/* 让一行中的元素平均分配宽度 */
+	justify-content: space-around;
+	/* justify-content: center; */
+	align-items: center; 
+	/* 元素在一行放不下时自动换行 */
+	flex-wrap: wrap;
+	/* vertical-align: auto; */
+}
+
+.linkBtns-list li{ 
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* 让元素垂直排列 这里就是让包含图片的div和文字垂直排列 */
+	flex-direction: column;
+	width: 160px;
+	height: 160px;
+	padding: 10px;
+	margin: 10px;
+	/* cursor: pointer; */
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.linkBtn-item-img {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	padding: 0 0 15px 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.linkBtn-item-img:hover{
+	/* width: 150px;
+	height: 150px; */
+	transform:scale(1.5);
+	/* padding: 0 0 15px 0; */
+}

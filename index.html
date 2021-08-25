@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link href="css/hover.css" rel="stylesheet" media="all">
+		<link rel="stylesheet" href="css/searchbar.css" />
+		<link rel="stylesheet" href="css/linkBtns.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<!-- 我的阿里图标库 -->
+		<script src="http://at.alicdn.com/t/font_2761549_0xrmc2d1j7c.js"></script>
+		
+		<script src = "http://code.jquery.com/jquery-1.11.0.min.js" > </script>
+
+	</head>
+	
+	
+
+	<body OnLoad="typetext()&onresizedfun()" onclick="playColor(event)&playFuQiang(event)" ontouch="toucuPlayColor(event)&touchPlayFuQiang(event)">
+		<script src="./js/click-colorful.js"></script>
+
+		<header style="text-align: right;">
+			<div style="width: 100%; ">
+							
+				<svg class="header-img-huanyihuan" aria-hidden="true" onclick="reqAndType(event)">
+					<use xlink:href="#icon-huanyihuan"></use>
+				</svg>
+				
+				<svg class="header-img-pic" aria-hidden="true" onclick="turnStaticBg_s(event)">
+					<use xlink:href="#icon-picture"></use>
+				</svg>
+				<svg class="header-img-fengche" aria-hidden="true" onclick="turnBg(event)">
+					<use xlink:href="#icon-fengche"></use>
+				</svg>
+				
+			</div>
+		</header>
+		
+		<div id="content">
+			
+			<!--内容-->
+			<div class="main">
+				<div  style="text-align: center; min-height: 115px; width: 100%; max-width: 900px; position: relative; margin: auto;padding-top: 60px;">
+					<a id="hitokoto" class="hvr-bubble-float-bottom" style="font-size: xx-large; border-radius: 40px; background-color: rgba(70, 70, 70, 0.8); padding: 12px; font-weight: bold; color: #F4F4F4;"></a>
+				</div>
+
+				
+				<div class="container content-box">
+					
+					<!--搜索栏-->
+					<section class="sousuo">
+						<div class="search">
+							<div class="search-box">
+								<span class="search-btn-span">
+									<svg class="search-engine-img" aria-hidden="true">
+									  <use xlink:href="#icon-baidu" id="search-engine-img-use"></use>
+									</svg>
+								</span>
+								<input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索" />
+								
+								<span class="search-btn-span" id="search-btn">
+									<svg class="search-btn-img" aria-hidden="true">
+										<use xlink:href="#icon-sousuo"></use>
+									</svg>
+								</span>
+							</div>
+							
+							<!-- 搜索引擎 -->
+							<div class="search-engine">
+								<div class="search-engine-head">
+									<strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+								</div>
+								<ul class="search-engine-list">
+								</ul>
+							</div>
+						</div>
+					</section>
+					
+					<!-- 快速连接区 -->
+					<section class="linkBtns">
+						<div class="linkBtnsBox">
+							<ul class="linkBtns-list">
+							</ul>
+						</div>
+					</section>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<iframe id="bg-iframe" name="ibg_iframe" scrolling="no"  onresize="onresizedfun()" ></iframe>
+		
+		<script src="js/searchbar.js"></script>
+		<script src="js/linkBtns.js"></script>
+
+		<script src="js/navigation.js"></script>
+		
+		
+	</body>
+
+</html>

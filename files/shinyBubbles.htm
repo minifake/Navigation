@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        article, aside, footer, header, nav, section {
+            display: block
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: .67em 0
+        }
+
+        figcaption, figure, main {
+            display: block
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible
+        }
+
+        pre {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        abbr[title] {
+            border-bottom: none;
+            text-decoration: underline;
+            text-decoration: underline dotted
+        }
+
+        b, strong {
+            font-weight: inherit
+        }
+
+        b, strong {
+            font-weight: bolder
+        }
+
+        code, kbd, samp {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+
+        dfn {
+            font-style: italic
+        }
+
+        mark {
+            background-color: #ff0;
+            color: #000
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub, sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        audio, video {
+            display: inline-block
+        }
+
+        audio:not([controls]) {
+            display: none;
+            height: 0
+        }
+
+        img {
+            border-style: none
+        }
+
+        svg:not(:root) {
+            overflow: hidden
+        }
+
+        button, input, optgroup, select, textarea {
+            font-family: sans-serif;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0
+        }
+
+        button, input {
+            overflow: visible
+        }
+
+        button, select {
+            text-transform: none
+        }
+
+        [type=reset], [type=submit], button, html [type=button] {
+            -webkit-appearance: button
+        }
+
+        [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+            border-style: none;
+            padding: 0
+        }
+
+        [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+            outline: 1px dotted ButtonText
+        }
+
+        fieldset {
+            padding: .35em .75em .625em
+        }
+
+        legend {
+            box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal
+        }
+
+        progress {
+            display: inline-block;
+            vertical-align: baseline
+        }
+
+        textarea {
+            overflow: auto
+        }
+
+        [type=checkbox], [type=radio] {
+            box-sizing: border-box;
+            padding: 0
+        }
+
+        [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        [type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        details, menu {
+            display: block
+        }
+
+        summary {
+            display: list-item
+        }
+
+        canvas {
+            display: inline-block
+        }
+
+        template {
+            display: none
+        }
+
+        [hidden] {
+            display: none
+        }
+
+        /*# sourceMappingURL=normalize.min.css.map */
+    </style>
+
+    <style>
+        body, html {
+            font-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        body {
+            background: #494A5F;
+            color: #D5D6E2;
+            font-weight: 500;
+            font-size: 1.05em;
+            font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.6);
+            outline: none;
+            text-decoration: none;
+            -webkit-transition: 0.2s;
+            transition: 0.2s;
+        }
+
+        a:hover, a:focus {
+            color: #74777b;
+            text-decoration: none;
+        }
+    </style>
+    <style>
+        body {
+            background: #000;
+            overflow: hidden;
+        }
+
+        canvas {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #c1 {
+            opacity: 0;
+        }
+
+        #c2 {
+            background: #000;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<canvas id="c1" width="1680" height="825"></canvas>
+<canvas id="c2" width="1680" height="825"></canvas>
+
+<script>
+    var c1 = document.getElementById('c1'),
+        ctx1 = c1.getContext('2d'),
+        c2 = document.getElementById('c2'),
+        ctx2 = c2.getContext('2d'),
+        twopi = Math.PI * 2,
+        parts = [],
+        sizeBase,
+        cw,
+        opt,
+        hue,
+        count;
+
+    function rand(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function hsla(h, s, l, a) {
+        return 'hsla(' + h + ',' + s + '%,' + l + '%,' + a + ')';
+    }
+
+    function create() {
+        sizeBase = cw + ch;
+        count = Math.floor(sizeBase * 0.3),
+            hue = rand(0, 360),
+            opt = {
+                radiusMin: 1,
+                radiusMax: sizeBase * 0.04,
+                blurMin: 10,
+                blurMax: sizeBase * 0.04,
+                hueMin: hue,
+                hueMax: hue + 100,
+                saturationMin: 10,
+                saturationMax: 70,
+                lightnessMin: 20,
+                lightnessMax: 50,
+                alphaMin: 0.1,
+                alphaMax: 0.5
+            }
+        ctx1.clearRect(0, 0, cw, ch);
+        ctx1.globalCompositeOperation = 'lighter';
+        while (count--) {
+            var radius = rand(opt.radiusMin, opt.radiusMax),
+                blur = rand(opt.blurMin, opt.blurMax),
+                x = rand(0, cw),
+                y = rand(0, ch),
+                hue = rand(opt.hueMin, opt.hueMax),
+                saturation = rand(opt.saturationMin, opt.saturationMax),
+                lightness = rand(opt.lightnessMin, opt.lightnessMax),
+                alpha = rand(opt.alphaMin, opt.alphaMax);
+
+            ctx1.shadowColor = hsla(hue, saturation, lightness, alpha);
+            ctx1.shadowBlur = blur;
+            ctx1.beginPath();
+            ctx1.arc(x, y, radius, 0, twopi);
+            ctx1.closePath();
+            ctx1.fill();
+        }
+
+        parts.length = 0;
+        for (var i = 0; i < Math.floor((cw + ch) * 0.03); i++) {
+            parts.push({
+                radius: rand(1, sizeBase * 0.03),
+                x: rand(0, cw),
+                y: rand(0, ch),
+                angle: rand(0, twopi),
+                vel: rand(0.1, 0.5),
+                tick: rand(0, 10000)
+            });
+        }
+    }
+
+    function init() {
+        resize();
+        create();
+        loop();
+    }
+
+    function loop() {
+        requestAnimationFrame(loop);
+
+        ctx2.clearRect(0, 0, cw, ch);
+        ctx2.globalCompositeOperation = 'source-over';
+        ctx2.shadowBlur = 0;
+        ctx2.drawImage(c1, 0, 0);
+        ctx2.globalCompositeOperation = 'lighter';
+
+        var i = parts.length;
+        ctx2.shadowBlur = 15;
+        ctx2.shadowColor = '#fff';
+        while (i--) {
+            var part = parts[i];
+
+            part.x += Math.cos(part.angle) * part.vel;
+            part.y += Math.sin(part.angle) * part.vel;
+            part.angle += rand(-0.05, 0.05);
+
+            ctx2.beginPath();
+            ctx2.arc(part.x, part.y, part.radius, 0, twopi);
+            ctx2.fillStyle = hsla(0, 0, 100, 0.075 + Math.cos(part.tick * 0.02) * 0.05);
+            ctx2.fill();
+
+            if (part.x - part.radius > cw) {
+                part.x = -part.radius
+            }
+            if (part.x + part.radius < 0) {
+                part.x = cw + part.radius
+            }
+            if (part.y - part.radius > ch) {
+                part.y = -part.radius
+            }
+            if (part.y + part.radius < 0) {
+                part.y = ch + part.radius
+            }
+
+            part.tick++;
+        }
+    }
+
+    function resize() {
+        cw = c1.width = c2.width = window.innerWidth,
+            ch = c1.height = c2.height = window.innerHeight;
+        create();
+    }
+
+    function click() {
+        create()
+    }
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('click', click);
+
+    init();
+</script>
+
+
+</body>
+</html>
