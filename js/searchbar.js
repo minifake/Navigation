@@ -1,5 +1,5 @@
 // jQuery (ZUI中的Javascript组件依赖于jQuery) 
-// <script src = "http://code.jquery.com/jquery-1.11.0.min.js" > < /script>
+// <script src = "https://code.jquery.com/jquery-1.11.0.min.js" > < /script>
 
 // 搜索引擎列表，自动换行
 var search = {
@@ -19,7 +19,7 @@ var search = {
 		}, {
 			name: 'Bilibili',
 			src: 'icon-bilibili',
-			url: 'http://search.bilibili.com/all?keyword='
+			url: 'https://search.bilibili.com/all?keyword='
 		}, {
 			name: '豆瓣',
 			src: 'icon-douban',
@@ -43,7 +43,7 @@ var search = {
 		}, {
 			name: '京东',
 			src: 'icon-jingdong',
-			url: 'http://search.jd.com/Search?keyword='
+			url: 'https://search.jd.com/Search?keyword='
 		}, {
 			name: '天猫',
 			src: 'icon-tmall',
@@ -67,7 +67,7 @@ var search = {
 		}, {
 			name: '小众搜索',
 			src: 'icon-mengsou',
-			url: 'http://www.caup.cn/search?q='
+			url: 'https://www.caup.cn/search?q='
 		}, 
 	]
 }

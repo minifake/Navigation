@@ -19,7 +19,7 @@ function reqHitokoto() {
 }
 
 function reqDuJiTang() {
-	fetch('http://api.btstu.cn/yan/api.php')
+	fetch('https://api.btstu.cn/yan/api.php')
 		.then(response => response.text())
 		.then(data => {
 			text = data
@@ -159,7 +159,7 @@ var staticUrlsArray = new Array(
 	'https://source.unsplash.com/collection/3672442/1920x1080',    //the-sea
 	'https://source.unsplash.com/collection/3694365/1920x1080',    //gradient-nation
 	'https://source.unsplash.com/collection/4435020/1920x1080',    //desktop
-	// 'http://api.btstu.cn/sjbz/?lx=dongman',                        //动漫  被防盗了
+	// 'https://api.btstu.cn/sjbz/?lx=dongman',                        //动漫  被防盗了
 );
 var s_i = 0;
 
