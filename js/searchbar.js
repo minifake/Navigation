@@ -65,7 +65,7 @@ var search = {
 			src: 'icon-ali1688',
 			url: 'https://s.1688.com/selloffer/offer_search.htm?keywords='
 		}, {
-			name: '小众搜索',
+			name: '小众搜',
 			src: 'icon-mengsou',
 			url: 'https://www.caup.cn/search?q='
 		}, 

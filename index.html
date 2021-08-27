@@ -7,12 +7,13 @@
 		<link rel="shortcut icon" href="files/logo.png" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		
-		<link href="css/hover.css" rel="stylesheet" media="all">
-		<link rel="stylesheet" href="css/searchbar.css" />
-		<link rel="stylesheet" href="css/linkBtns.css" />
+		<link rel="stylesheet" href="css/searchbar.css" media="screen and (min-width:414px)"/>
+		<link rel="stylesheet" href="css/searchbar_phone.css" media="screen and (max-width:414px)"/>
+		<link rel="stylesheet" href="css/linkBtns.css" media="screen and (min-width:432px)"/>
+		<link rel="stylesheet" href="css/linkBtns_phone.css" media="screen and (max-width:432px)"/>
 		<link rel="stylesheet" href="css/index.css" />
 		<!-- 我的阿里图标库 -->
-		<script src="https://at.alicdn.com/t/font_2761549_0xrmc2d1j7c.js"></script>
+		<script src="https://at.alicdn.com/t/font_2761549_2ao984dzfy9.js"></script>
 		
 		<script src = "https://code.jquery.com/jquery-1.11.0.min.js" > </script>
 
@@ -25,6 +26,9 @@
 
 		<header style="text-align: right;">
 			<div style="width: 100%; ">
+				<svg class="header-img-Lan" aria-hidden="true" onclick="switchWanOrLan(event)">
+					<use xlink:href="#icon-Lan"></use>
+				</svg>
 							
 				<svg class="header-img-huanyihuan" aria-hidden="true" onclick="reqAndType(event)">
 					<use xlink:href="#icon-huanyihuan"></use>
@@ -44,10 +48,9 @@
 			
 			<!--内容-->
 			<div class="main">
-				<div  style="text-align: center; min-height: 115px; width: 100%; max-width: 900px; position: relative; margin: auto;padding-top: 60px;">
-					<a id="hitokoto" class="hvr-bubble-float-bottom" style="font-size: xx-large; border-radius: 40px; background-color: rgba(70, 70, 70, 0.8); padding: 12px; font-weight: bold; color: #F4F4F4;"></a>
+				<div class="hitokoto_text_div">
+					<a id="hitokoto" class="hitokoto_text" ></a>
 				</div>
-
 				
 				<div class="container content-box">
 					
@@ -60,7 +63,7 @@
 									  <use xlink:href="#icon-baidu" id="search-engine-img-use"></use>
 									</svg>
 								</span>
-								<input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索" />
+								<input type="text" id="txt" class="search-input" placeholder="选择引擎,输入关键字,回车/Enter搜索" />
 								
 								<span class="search-btn-span" id="search-btn">
 									<svg class="search-btn-img" aria-hidden="true">
@@ -80,8 +83,13 @@
 						</div>
 					</section>
 					
-					<!-- 快速连接区 -->
+					<!-- 快速链接区 -->
 					<section class="linkBtns">
+						<!-- 切换内网链接隐藏入口 -->
+						<div style="margin: auto; text-align: center; height: 10px;">
+							<a style="color: transparent; padding-left: 20px;padding-left: 20px;" onclick="switchWanOrLanPre(event)"></a>
+						</div>
+						
 						<div class="linkBtnsBox">
 							<ul class="linkBtns-list">
 							</ul>

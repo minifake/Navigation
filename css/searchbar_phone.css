@@ -1,11 +1,11 @@
 .hitokoto_text_div {
 	text-align: center;
-	min-height: 115px;
+	min-height: 80px;
 	width: 100%;
 	max-width: 900px;
 	position: relative;
 	margin: auto;
-	padding-top: 60px;
+	padding-top: 30px;
 }
 
 .hitokoto_text {
@@ -13,7 +13,7 @@
 
 	/* style="font-size: xx-large; border-radius: 40px; background-color: rgba(70, 70, 70, 0.8); padding: 12px; font-weight: bold; color: #F4F4F4;" */
 
-	font-size: xx-large;
+	font-size: large;
 	border-radius: 40px;
 	background-color: rgba(70, 70, 70, 0.8);
 	padding: 12px;
@@ -62,7 +62,6 @@
 	border-width: 10px 10px 0 10px;
 }
 
-
 .sousuo {
 	/* padding: 35px 0; */
 }
@@ -79,10 +78,11 @@
 	/*box-shadow: 0px 0px 2px 0px #ccc;*/
 	border-radius: 50px;
 	overflow: hidden;
+	width: 100%;
 	display: -webkit-flex;
 	/* Safari */
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	border: 1px solid #e6e6e6;
 	background-color: #ffffff;
 }
@@ -221,16 +221,16 @@ input::-webkit-input-placeholder {
 
 .search-engine-list li {
 	float: left;
-	width: 130px;
-	line-height: 60px;
-	font-size: 16px;
+	width: 100px;
+	line-height: 50px;
+	font-size: 15px;
 	padding: 5px 10px 5px 10px;
-	margin: 0 36px 36px 0;
+	margin: 0 30px 30px 0;
 	background: #f4f4f4;
 	border-radius: 15px;
 	color: #1e1e1e;
-	box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2),
-		-18px -18px 30px rgba(255, 255, 255, 1);
+	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2),
+		-15px -15px 30px rgba(255, 255, 255, 1);
 	/* 过渡时间 ease-out是指先快速 后慢速 */
 	transition: all 0.2s ease-out;
 	cursor: pointer;
@@ -240,15 +240,15 @@ input::-webkit-input-placeholder {
 	/* background: #55aaff; */
 	/* inset 是内部阴影 默认是外部阴影outset */
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8),
-		inset 18px 18px 30px rgba(0, 0, 0, 0.1),
-		inset -18px -18px 30px rgba(255, 255, 255, 1);
+		inset 15px 15px 30px rgba(0, 0, 0, 0.1),
+		inset -15px -15px 30px rgba(255, 255, 255, 1);
 }
 
 .search-engine-item-img {
-	width: 50px;
-	height: 50px;
-	vertical-align: -20px;
-	padding-right: 10px;
+	width: 40px;
+	height: 40px;
+	vertical-align: -15px;
+	padding-right: 5px;
 }
 
 #content .content-box {
