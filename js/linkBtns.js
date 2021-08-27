@@ -10,12 +10,12 @@ var mylinks = {
 		{
 			name: 'Nextcloud',
 			src: 'icon-nextcloud',
-			url: 'https://szhl.minifake.xyz:32515',
+			url: 'http://szhl.minifake.xyz:32515',
 			url_in: in_IP + '8086',
 		}, {
 			name: '宝塔面板',
 			src: 'icon-mianban',
-			url: 'https://szhl.minifake.xyz:31448',
+			url: 'http://szhl.minifake.xyz:31448',
 			url_in: in_IP + '8888',
 		}, {
 			name: 'Portainer',
