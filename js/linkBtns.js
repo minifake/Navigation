@@ -10,53 +10,55 @@ var mylinks = {
 		{
 			name: 'Nextcloud',
 			src: 'icon-nextcloud',
-			url: 'http://szhl.minifake.xyz:32515',
+			// url: 'http://szhl.minifake.xyz:32515',
+			url: 'http://nextcloudminifake.vaiwan.com',
 			url_in: in_IP + '8086',
 		}, {
 			name: '宝塔面板',
 			src: 'icon-mianban',
-			url: 'http://szhl.minifake.xyz:31448',
+			// url: 'http://szhl.minifake.xyz:31448',
+			url: 'http://baotaminifake.vaiwan.com',
 			url_in: in_IP + '8888',
 		}, {
 			name: 'Portainer',
 			src: 'icon-docker',
-			url: 'http://192.168.31.62:9000',  //暂无
+			url: 'http://portainerminifake.vaiwan.com',  //暂无
 			url_in: in_IP + '9000',
 		}, {
 			name: 'Photo',
 			src: 'icon-Photo',
-			url: 'http://192.168.31.62:8086',  
-			url_in: in_IP + '8086',
+			url: 'http://photoprismminifake.vaiwan.com',  
+			url_in: in_IP + '8083',
 		}, {
 			name: '百度网盘',
 			src: 'icon-baiduwangpan',
-			url: 'http://192.168.31.62:5299',
+			url: 'http://baidupcsminifake.vaiwan.com',
 			url_in: in_IP + '5299',
 		}, {
 			name: '笔记',
 			src: 'icon-biji',
-			url: 'http://192.168.31.62:8086',
-			url_in: in_IP + '8086',
+			url: 'http://bijiminifake.vaiwan.com',
+			url_in: in_IP + '8087',
 		}, {
 			name: '博客',
 			src: 'icon-boke',
-			url: 'http://192.168.31.62:8086',
-			url_in: in_IP + '8086',
+			url: 'http://blogsminifake.vaiwan.com',
+			url_in: in_IP + '8880',
 		}, {
 			name: 'PLEX',
 			src: 'icon-plex',
-			url: 'https://hao.5iux.cn/',
-			url_in: in_IP + '8086',
+			url: 'https://plexminifake.vaiwan.com',
+			url_in: in_IP + '8089',
 		}, {
-			name: '导航',
+			name: '照片展示',
 			src: 'icon-feiji1',
-			url: 'https://hao.5iux.cn/',
-			url_in: in_IP + '8086',
+			url: 'https://piwigominifake.vaiwan.com',
+			url_in: in_IP + '8082',
 		}, {
 			name: '导航',
 			src: 'icon-daohanglansheji',
 			url: 'https://hao.5iux.cn/',
-			url_in: in_IP + '8086',
+			url_in: in_IP + '80',
 		}
 	]
 }
