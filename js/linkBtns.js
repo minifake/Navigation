@@ -43,16 +43,16 @@ var mylinks = {
 			name: '博客',
 			src: 'icon-boke',
 			url: 'http://blogsminifake.vaiwan.com',
-			url_in: in_IP + '8880',
+			url_in: 'http://blogsminifake.vaiwan.com/wp-admin',
 		}, {
 			name: 'PLEX',
 			src: 'icon-plex',
 			url: 'https://plexminifake.vaiwan.com',
-			url_in: in_IP + '8089',
+			url_in: in_IP + '32400',
 		}, {
 			name: '照片展示',
-			src: 'icon-feiji1',
-			url: 'https://piwigominifake.vaiwan.com',
+			src: 'icon-zhaopian',
+			url: 'http://photoprismminifake.vaiwan.com/s/8zc6ov0cpv/gallery',
 			url_in: in_IP + '8082',
 		}, {
 			name: '导航',
