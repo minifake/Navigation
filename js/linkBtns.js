@@ -42,8 +42,8 @@ var mylinks = {
 		}, {
 			name: '博客',
 			src: 'icon-boke',
-			url: 'http://blogsminifake.vaiwan.com',
-			url_in: 'http://blogsminifake.vaiwan.com/wp-admin',
+			url: 'http://blogs.minifake.xyz',
+			url_in: 'http://blogs.minifake.xyz/wp-admin',
 		}, {
 			name: 'PLEX',
 			src: 'icon-plex',
