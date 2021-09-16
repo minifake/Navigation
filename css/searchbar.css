@@ -114,7 +114,7 @@
 	height: 50px;
 	line-height: 50px;
 	font-size: 20px;
-	color: #7d7d7d;
+	color: #303030;
 	border: none;
 	outline: none;
 	padding-left: 6px;
@@ -267,3 +267,47 @@ input::-webkit-input-placeholder {
 	padding: 20px 10px 0px 10px;
 	margin: 0;
 } */
+
+
+.search-suggestion {
+	position: absolute;
+	left: 51px;
+	top: 49px;
+	/* width: 85%; */
+	right: 51px;
+	background: #FFF;
+	border-radius: 4px;
+	display: none;
+	/* border: #0078FF;
+	border-style: solid;
+	border-width: medium; */
+	border-left: 4px solid #0078FF;
+	border-right: 4px solid #0078FF;
+	border-bottom: 4px solid #0078FF;
+	z-index: 998;
+	padding-bottom: 10px;
+}
+
+.search-suggestion-list {
+	/* display: flex; */
+	display: block;
+	padding: 5px;
+	
+	/* 让一行中的元素平均分配宽度 */
+	/* justify-content: space-around; */
+}
+
+.search-suggestion-list li {
+	float: left;
+	width: 100%;
+	font-size: 18px;
+	color: #303030;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	cursor: pointer;
+}
+
+.search-suggestion-list li:hover {
+	background-color: #e7e7e7 !important; 
+	color: #0078FF !important;
+}

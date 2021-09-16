@@ -11,7 +11,8 @@ var mylinks = {
 			name: 'Nextcloud',
 			src: 'icon-nextcloud',
 			// url: 'http://szhl.minifake.xyz:32515',
-			url: 'http://nextcloudminifake.vaiwan.com',
+			// url: 'http://nextcloudminifake.vaiwan.com',
+			url: 'https://pan.minifake.xyz',
 			url_in: in_IP + '8086',
 		}, {
 			name: '宝塔面板',
@@ -22,7 +23,7 @@ var mylinks = {
 		}, {
 			name: 'Portainer',
 			src: 'icon-docker',
-			url: 'http://portainerminifake.vaiwan.com',  //暂无
+			url: 'https://docker.minifake.xyz',  //暂无
 			url_in: in_IP + '9000',
 		}, {
 			name: 'Photo',
@@ -42,8 +43,8 @@ var mylinks = {
 		}, {
 			name: '博客',
 			src: 'icon-boke',
-			url: 'http://blogs.minifake.xyz',
-			url_in: 'http://blogs.minifake.xyz/wp-admin',
+			url: 'https://blogs.minifake.xyz',
+			url_in: 'https://blogs.minifake.xyz/wp-admin',
 		}, {
 			name: 'PLEX',
 			src: 'icon-plex',
