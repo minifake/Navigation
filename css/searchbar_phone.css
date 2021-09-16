@@ -118,6 +118,7 @@
 	border: none;
 	outline: none;
 	padding-left: 6px;
+	width: 100%;
 }
 
 input::-webkit-input-placeholder {
@@ -285,6 +286,7 @@ input::-webkit-input-placeholder {
 	border-left: 4px solid #0078FF;
 	border-right: 4px solid #0078FF;
 	border-bottom: 4px solid #0078FF;
+	border-top: 1px solid #b0b0b0;
 	z-index: 998;
 	padding-bottom: 10px;
 }
