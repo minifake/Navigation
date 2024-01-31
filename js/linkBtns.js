@@ -12,23 +12,23 @@ var mylinks = {
 			src: 'icon-nextcloud',
 			// url: 'http://szhl.minifake.xyz:32515',
 			// url: 'http://nextcloudminifake.vaiwan.com',
-			url: 'https://pan.minifake.xyz',
+			url: 'https://pan.llsy99.cn',
 			url_in: in_IP + '8086',
 		}, {
 			name: '宝塔面板',
 			src: 'icon-mianban',
 			// url: 'http://szhl.minifake.xyz:31448',
-			url: 'http://baotaminifake.vaiwan.com',
+			url: 'http://baota.llsy99.cn',
 			url_in: in_IP + '8888',
 		}, {
 			name: 'Portainer',
 			src: 'icon-docker',
-			url: 'https://docker.minifake.xyz',  //暂无
+			url: 'https://docker.llsy99.cn',  //暂无
 			url_in: in_IP + '9000',
 		}, {
 			name: 'Photo',
 			src: 'icon-Photo',
-			url: 'http://photoprismminifake.vaiwan.com',  
+			url: 'http://photo.llsy99.cn',  
 			url_in: in_IP + '8083',
 		}, {
 			name: '百度网盘',
@@ -43,8 +43,8 @@ var mylinks = {
 		}, {
 			name: '博客',
 			src: 'icon-boke',
-			url: 'https://blogs.minifake.xyz',
-			url_in: 'https://blogs.minifake.xyz/wp-admin',
+			url: 'https://blogs.llsy99.cn',
+			url_in: 'https://blogs.llsy99.cn/wp-admin',
 		}, {
 			name: 'PLEX',
 			src: 'icon-plex',
@@ -53,7 +53,7 @@ var mylinks = {
 		}, {
 			name: '照片展示',
 			src: 'icon-zhaopian',
-			url: 'http://photoprismminifake.vaiwan.com/s/8zc6ov0cpv/gallery',
+			url: 'http://photo.llsy99.cn/s/8zc6ov0cpv/gallery',
 			url_in: in_IP + '8082',
 		}, {
 			name: '导航',
